@@ -15,28 +15,35 @@
 ## Step 0: Load the "makeCacheMatrix" and "cacheSolve"
 ## routines into R.
 
+## Copy commented code below and paste into R console
+## to test functions.
+
 ## Step 1: Create Input Matrices
 ## M2 <- matrix(sample(2^2), nrow = 2)
 ## M3 <- matrix(sample(3^2), nrow = 3)
 ## M4 <- matrix(sample(4^2), nrow = 4)
 ## M5 <- matrix(sample(5^2), nrow = 5)
-## 
+##
+## In steps below M4 is used as an example. Any square
+## matrix should yield similar results
+##
 ## Step 2
 ## Link an input matrix to the Inverse Function by
 ## executing the following code:
 ## mat4 <- makeCacheMatrix(M4)
 
 ## Step 3
-## Find Inverse Function of input matrix by executing the
-## following code:
-## mat4i <- cacheSolve(mat4)
+## To print out the Inverse of input matrix execute
+## the following code:
+## cacheSolve(mat4)
 
 ## Step 4
-## Test Inverse function by multiplying Input and Inverse
-## matrices using the following code:
+## To test Inverse function, multiply the Input and
+## Inverse matrices using the following 2 lines of code:
+## mat4i <- cacheSolve(mat4)
 ## M4 %*% mat4i
 ## This should yield an Identity Matrix with the same
-## number of dimensions as the Input Matrix.
+## dimensions as the Input Matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
 	i <- NULL
